@@ -1,8 +1,8 @@
-FROM wscherphof/oracle-linux-7
+FROM garrettux/oracle-linux-64
 MAINTAINER Wouter Scherphof <wouter.scherphof@gmail.com>
 
-ADD linuxamd64_12102_database_1of2.zip /tmp/install/linuxamd64_12102_database_1of2.zip
-ADD linuxamd64_12102_database_2of2.zip /tmp/install/linuxamd64_12102_database_2of2.zip
+ADD linuxamd64_12c_database_1of2.zip /tmp/install/linuxamd64_12102_database_1of2.zip
+ADD linuxamd64_12c_database_2of2.zip /tmp/install/linuxamd64_12102_database_2of2.zip
 RUN yum -y install unzip
 RUN cd /tmp/install && unzip linuxamd64_12102_database_1of2.zip && unzip linuxamd64_12102_database_2of2.zip && rm *.zip
 

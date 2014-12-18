@@ -155,7 +155,7 @@ As install user, execute the following script to complete the configuration.
 	1. /u01/app/oracle/product/12.1.0/dbhome_1/cfgtoollogs/configToolAllCommands RESPONSE_FILE=<response_file>
 
  	Note:
-	1. This script must be run on the same host from where installer was run. 
+	1. This script must be run on the same host from where installer was run.
 	2. This script needs a small password properties file for configuration assistants that require passwords (refer to install guide documentation).
 
 ```
@@ -220,6 +220,14 @@ Create is done; commit the container now
 
 #### Step 3
 1) `$ docker build -t oracle-12c step3`
+
+## Notes
+
+- [Flatten a Docker container or image](http://tuhrig.de/flatten-a-docker-container-or-image/)
+- [Saving and loading Docker images to a compressed tar file](http://olavgg.com/post/89859509533/saving-and-loading-docker-images-to-a-compressed)
+- [UTF-8 Conversion](https://stackoverflow.com/questions/25666824/utf-8-in-oracle-12c)
+- [Install Oracle Text](http://blog.it-iresource.be/?p=260)
+
 
 ## License
 [GNU Lesser General Public License (LGPL)](http://www.gnu.org/licenses/lgpl-3.0.txt) for the contents of this GitHub repo; for Oracle's database software, see their [Licensing Information](http://docs.oracle.com/database/121/DBLIC/toc.htm)

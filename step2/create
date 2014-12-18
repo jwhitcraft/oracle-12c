@@ -12,7 +12,7 @@ export ORACLE_HOME
 
 PATH=$ORACLE_HOME/bin:$PATH
 export PATH
-EOF
+EOF 
 
 mount -t tmpfs shmfs -o size=4g /dev/shm
 
@@ -28,6 +28,15 @@ cp catalog.sql catalog-e.sql
 echo "exit" >> catalog-e.sql
 su -s /bin/bash oracle -c "sqlplus / as sysdba @?/rdbms/admin/catalog-e.sql > /tmp/catalog.log"
 rm catalog-e.sql
+echo ""
+
+date
+echo "Running catctx.sql..."
+cd $ORACLE_HOME/ctx/admin
+cp catctx.sql catctx-e.sql
+echo "exit" >> catctx-e.sql
+su -s /bin/bash oracle -c "sqlplus / as sysdba @?/ctx/admin/catctx-e.sql welcome SYSAUX TEMP NOLOCK > /tmp/catalog.log"
+rm catctx-e.sql
 echo ""
 
 date

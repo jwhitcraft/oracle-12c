@@ -1,5 +1,17 @@
 #!/bin/bash
 
+ORACLE_BASE=/u01/app/oracle
+export ORACLE_BASE
+
+ORACLE_SID=ORCL
+export ORACLE_SID
+
+ORACLE_HOME=$ORACLE_BASE/product/12.1.0/dbhome_1
+export ORACLE_HOME
+
+PATH=$ORACLE_HOME/bin:$PATH
+export PATH
+
 mount -t tmpfs shmfs -o size=4g /dev/shm
 
 while true; do
