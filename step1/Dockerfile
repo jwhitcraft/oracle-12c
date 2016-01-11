@@ -22,7 +22,7 @@ ADD sysctl.conf /etc/sysctl.conf
 RUN echo "oracle soft stack 10240" >> /etc/security/limits.conf
 
 ENV CVUQDISK_GRP oinstall
-RUN cd /tmp/install/database/rpm && rpm -iv cvuqdisk-1.0.9-1.rpm
+RUN cd /tmp/install/database/rpm && rpm -iv cvuqdisk-1.0.7-1.rpm
 
 ADD db_install.rsp /tmp/db_install.rsp
 ADD install /tmp/install/install
