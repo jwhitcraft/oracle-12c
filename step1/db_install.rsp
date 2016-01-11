@@ -44,7 +44,7 @@ UNIX_GROUP_NAME=oinstall
 #-------------------------------------------------------------------------------
 # Specify the location which holds the inventory files.
 #-------------------------------------------------------------------------------
-INVENTORY_LOCATION=/opt/oraInventory
+INVENTORY_LOCATION=/u01/app/oraInventory
 
 #-------------------------------------------------------------------------------
 # Specify the languages in which the components will be installed.             
@@ -80,12 +80,12 @@ SELECTED_LANGUAGES=en,fr
 #------------------------------------------------------------------------------
 # Specify the complete path of the Oracle Home.
 #------------------------------------------------------------------------------
-ORACLE_HOME=/opt/oracle/product/11.2.0/dbhome_1
+ORACLE_HOME=/u01/app/oracle/product/11.2.0/dbhome_1
 
 #------------------------------------------------------------------------------
 # Specify the complete path of the Oracle Base. 
 #------------------------------------------------------------------------------
-ORACLE_BASE=/opt/oracle
+ORACLE_BASE=/u01/app/oracle
 
 #------------------------------------------------------------------------------
 # Specify the installation edition of the component.                        
@@ -329,7 +329,7 @@ oracle.install.db.config.starterdb.storageType=
 #
 # Applicable only when oracle.install.db.config.starterdb.storage=FILE_SYSTEM 
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.fileSystemStorage.dataLocation=/opt/datafile
+oracle.install.db.config.starterdb.fileSystemStorage.dataLocation=/u01/app/oracle/datafile
 
 #-------------------------------------------------------------------------------
 # Specify the backup and recovery location.
