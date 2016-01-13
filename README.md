@@ -130,9 +130,9 @@ Should you want to modify & build your own image:
 
 3) `cd` to the `oracle-12c` repo directory
 
-4) `$ docker build -t oracle-12c:step1 step1`
+4) `$ docker build -t oracle-11g:step1 step1`
 
-5) `$ docker run --privileged -ti --name step1 oracle-12c:step1 /bin/bash`
+5) `$ docker run --privileged -ti --name step1 oracle-11g:step1 /bin/bash`
 
 6) ` # /tmp/install/install` (takes about 5m)
 ```
@@ -153,7 +153,7 @@ As a root user, execute the following script(s):
 
 Successfully Setup Software.
 As install user, execute the following script to complete the configuration.
-	1. /u01/app/oracle/product/12.1.0/dbhome_1/cfgtoollogs/configToolAllCommands RESPONSE_FILE=<response_file>
+	1. /u01/app/oracle/product/11.2.0/dbhome_1/cfgtoollogs/configToolAllCommands RESPONSE_FILE=<response_file>
 
  	Note:
 	1. This script must be run on the same host from where installer was run. 
@@ -164,19 +164,19 @@ As install user, execute the following script to complete the configuration.
 
 8) ` # exit` (the scripts mentioned are executed as part of the step2 build)
 
-9) `$ docker commit step1 oracle-12c:installed`
+9) `$ docker commit step1 oracle-11g:installed`
 
 #### Step 2
-1) `$ docker build -t oracle-12c:step2 step2`
+1) `$ docker build -t oracle-11g:step2 step2`
 
-2) `$ docker run --privileged -ti --name step2 oracle-12c:step2 /bin/bash`
+2) `$ docker run --privileged -ti --name step2 oracle-11g:step2 /bin/bash`
 
 3) ` # /tmp/create` (takes about 15m)
 ```
 Tue Sep 16 11:07:30 UTC 2014
 Creating database...
 
-SQL*Plus: Release 12.1.0.2.0 Production on Tue Sep 16 11:07:30 2014
+SQL*Plus: Release 11.2.0.1.0 Production on Tue Sep 16 11:07:30 2014
 
 Copyright (c) 1982, 2014, Oracle.  All rights reserved.
 
@@ -200,7 +200,7 @@ Tablespace created.
 
 Tablespace created.
 
-Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.2.0 - 64bit Production
 With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
 
 Tue Sep 16 11:07:50 UTC 2014
@@ -220,10 +220,10 @@ Create is done; commit the container now
 ```
 4) ` # exit`
 
-5) `$ docker commit step2 oracle-12c:created`
+5) `$ docker commit step2 oracle-11g:created`
 
 #### Step 3
-1) `$ docker build -t oracle-12c step3`
+1) `$ docker build -t oracle-11g step3`
 
 ## License
 [GNU Lesser General Public License (LGPL)](http://www.gnu.org/licenses/lgpl-3.0.txt) for the contents of this GitHub repo; for Oracle's database software, see their [Licensing Information](http://docs.oracle.com/database/121/DBLIC/toc.htm)

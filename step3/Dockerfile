@@ -1,5 +1,5 @@
-FROM oracle-12c:created
-MAINTAINER Wouter Scherphof <wouter.scherphof@gmail.com>
+FROM oracle-11g:created
+MAINTAINER Jon Whitcraft <jwhitcraft@sugarcrm.com>
 
 RUN rm /tmp/create
 
