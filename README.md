@@ -1,4 +1,5 @@
-# Instant Oracle datase server
+# Instant Oracle database server
+
 A [Docker](https://www.docker.com/) [image](https://registry.hub.docker.com/u/wscherphof/oracle-12c/) with [Oracle Database 12c Enterprise Edition Release 12.1.0.2.0](http://www.oracle.com/technetwork/database/enterprise-edition/overview/index.html) running in [Oracle Linux 7](http://www.oracle.com/us/technologies/linux/overview/index.html)
 - Default ORCL database on port 1521
 
