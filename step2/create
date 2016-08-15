@@ -35,6 +35,15 @@ rm catalog-e.sql
 echo ""
 
 date
+echo "Running catctx.sql (oracle text)..."
+cd $ORACLE_HOME/ctx/admin
+cp catctx.sql catctx-e.sql
+echo "exit" >> catctx-e.sql
+su -s /bin/bash oracle -c "sqlplus / as sysdba @?/ctx/admin/catctx-e.sql welcome SYSAUX TEMP NOLOCK > /tmp/catalog.log"
+rm catctx-e.sql
+echo ""
+
+date
 echo "Running catproc.sql..."
 cd $ORACLE_HOME/rdbms/admin
 cp catproc.sql catproc-e.sql
